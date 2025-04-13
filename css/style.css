@@ -587,7 +587,7 @@ main .recent-orders a {
     }
     aside{
         position: fixed;
-        left: 0;
+        left: -100%;
         background-color: var(--color-white);
         width: 18rem;
         z-index: 3;
@@ -595,11 +595,20 @@ main .recent-orders a {
         height: 100vh;
         padding-right: var(--card-padding);
         display: none;
+        animation: showMenu 400ms ease forwards;
+    }
+    @keyframes showMenu {
+        to{
+            left: 0;
+        }
     }
     aside .logo{
         margin-left: 1rem;
     }
     aside .logo h2{
+        display: inline;
+    }
+    aside .sidebar h3{
         display: inline;
     }
     aside .sidebar a{
@@ -652,7 +661,7 @@ main .recent-orders a {
     .right .profile .info{
         display: none;
     }
-    .right .top .button{
+    .right .top button{
         display: inline-block;
         background-color: transparent;
         cursor: pointer;

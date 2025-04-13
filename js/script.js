@@ -23,3 +23,14 @@ function calcSales(sales,enpences,income,total){
     setPercentage(income.toLocaleString(),incomePercent.toFixed(1),"income")
 }
 calcSales(12045,2000,10054,15000)
+
+const sideMenu=document.querySelector("aside")
+const menuBtn=document.querySelector("#menu-btn")
+const closeBtn=document.querySelector("#close-btn")
+
+menuBtn.addEventListener('click',()=>{
+    sideMenu.style.display="block"
+})
+closeBtn.addEventListener('click',()=>{
+    sideMenu.style.display="none"
+})
