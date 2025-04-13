@@ -123,3 +123,6 @@ function display (){
     tableContent.innerHTML=cartona
 }
 display()
+
+const today = new Date().toISOString().split('T')[0];
+document.querySelector('main .date input[type="date"]').value=today
